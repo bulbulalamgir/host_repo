@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Wedeal</title>
+<link rel="stylesheet" href="css/wedeal.css" />
+
+<script src="js/jquery-1.7.1.min.js"></script>
+<script src="js/jquery.timer.js"></script>
+<script src="jquery.countdown.js"></script>
+<script src="js/wedeal.js"></script>
+</head>
+
+<body>
+
+<p>A script on this page starts this clock:</p>
+<p id="counter"></p>
+<span id="timer_10"></span>
+
+<script>
+var myVar = setInterval(function(){myTimer()}, 15000);
+
+function myTimer() {
+    $.ajax({
+		type: 'GET',
+		url: rootURL,
+		dataType: "json", // data type of response
+		success: renderList
+	});
+}
+
+var count = 0;
+var timer = $.timer(function() {
+	$('#counter').html(++count);
+});
+timer.set({ time : 1000, autostart : true });
+</script>
+
+<div class="header">
+
+	<button id="btnSearch">Bids</button>
+
+</div>
+
+
+
+<form id="example2form">
+
+<table>
+	<tr id="eventList">
+		
+	</tr>
+	<tr>
+	<td colspan="100%">
+		<span id="timer_10">05:00:00</span>
+	</td>
+	</tr>
+</table>
+
+</form>
+
+
+</body>
+</html>

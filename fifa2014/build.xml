@@ -1,0 +1,74 @@
+<project name="cellar" basedir="./" default="war">
+
+    <!-- Project settings -->
+    <property name="project.distname" value="cellar"/>
+
+
+    <!-- Local system paths -->
+    <property name="webroot.dir" value="${basedir}/WebContent"/>
+    <property name="webinf.dir" value="${webroot.dir}/WEB-INF"/>
+    <property name="metainf.dir" value="${webroot.dir}/META-INF"/>
+    <property name="build.dir" value="build"/>
+    <property name="war.dir" value="war"/>
+
+    <!-- classpath for JSF 1.0 -->
+	<path id="compile.classpath">
+		<fileset dir="${webinf.dir}/lib" includes="**/*.jar"/>
+    </path>
+
+
+    <!-- define your folder for deployment -->
+    <property name="deploy.dir" value="D:\Software Hub\from kiran\Tomcat-7.0.42\webapps"/>
+
+
+    <!-- Local system paths -->
+    <property file="${basedir}/ant/build.properties"/>
+    <property name="webroot.dir" value="${basedir}/WebContent"/>
+	<property name="src.dir" value="${basedir}/src"/>
+    <property name="webinf.dir" value="${webroot.dir}/WEB-INF"/>
+    <property name="build.dir" value="build"/>
+
+    <!-- Check timestamp on files -->
+    <target name="prepare">
+        <tstamp/>
+    </target>
+
+    <!-- Copy any resource or configuration files -->
+
+    <!-- Normal build of application -->
+ 
+    <!-- Remove classes directory for clean build -->
+    <target name="clean"
+      description="Prepare for clean build">
+      <delete dir="${war.dir}"/>
+      <delete dir="${basedir}/${project.distname}.war"/>
+    </target>
+
+    <!-- Build entire project -->
+
+    <!-- Create binary distribution -->
+        <target name="war" depends="clean">
+        		
+        	<javac srcdir="${src.dir}" destdir="${webinf.dir}/classes" classpathref="compile.classpath"/>
+               
+        	<mkdir dir="${war.dir}"/>
+                <copy todir="${war.dir}">
+                	<fileset dir="${webroot.dir}"/>
+       			</copy>
+                <!--copy todir="${war.dir}/config">
+                        <fileset dir="${config.dir}"/>
+                </copy-->
+                <mkdir dir="${war.dir}/WEB-INF/classes"/>
+                <copy todir="${war.dir}/WEB-INF/classes">
+                	<fileset dir="${build.dir}/classes"/>
+        		</copy>
+                <jar jarfile="${basedir}/${project.distname}.war" basedir="${war.dir}"/>
+        </target>
+
+    <target name="deploy" depends="war">
+       <delete file="${deploy.dir}/${project.distname}.war"/>
+       <delete dir="${deploy.dir}/${project.distname}"/>
+       <copy file="${basedir}/${project.distname}.war" todir="${deploy.dir}"/>
+    </target>
+
+</project>

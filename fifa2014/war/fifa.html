@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>FIFA WC 2014</title>
+<link rel="stylesheet" href="css/fifa.css" />
+<style type="text/css">
+::-webkit-scrollbar {
+	background: #2E2EFE;
+	width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #04B404;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #2E2EFE;
+	border-radius: 10px;
+}
+</style>
+</head>
+
+<body>
+	
+		<div id="parentDiv">
+			<center>
+				<div id="mainDiv" class="mainDiv">
+					<table id="mainTable" class="mainTable" width="100%">
+						<tr>
+							<td colspan="2">
+								<div class="parentDiv" style="float: left;">
+									<img src="pics/logo.png" width="50%" height="50%" />
+									
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td width="35%" align="left">
+								<font size="4">
+									<b>Fixtures	FIFA 2014<b />
+								</font>
+								<div id="fixturesDiv" class="fixturesDiv"></div>
+							</td>
+							<td width="65%">
+								<form>
+								<input type="hidden" name="selectedMatch" id="selectedMatch"/>
+								<input type="hidden" name="userId" id="userId" value="flexy009"/>
+								<input type="hidden" name="league" id="league" value="mss"/>
+								<h3><span id="matchVs"></span></h3> <br />
+								<table>
+									<tr>
+										<td>WINNER:</td>
+										<td>
+											<div class="styled-select">
+												<select id="winner" name="winner">
+													<option>---SELECT---</option>
+												</select>
+											</div>
+										</td>
+										<td>
+											[10 points]
+										<td>
+									</tr>
+									<tr>
+										<td><span id="spanTeamA">TEAM A</span> GOALS:</td>
+										<td>
+											<div class="styled-select">
+												<select id="teamAGoals" name="teamAGoals">
+													<option>---SELECT---</option>
+													<option>0</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5+</option>
+												</select>
+											</div>
+										</td>
+										<td>
+											[10 points]
+										<td>
+
+									</tr>
+									<tr>
+										<td><span id="spanTeamB">TEAM B</span> GOALS:</td>
+										<td>
+											<div class="styled-select">
+												<select id="teamBGoals" name="teamBGoals">
+													<option>---SELECT---</option>
+													<option>0</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5+</option>
+												</select>
+											</div>
+										</td>
+										<td>
+											[10 points]
+										<td>
+									</tr>
+									<tr>
+										<td>PLAYER OF THE MATCH:</td>
+										<td>
+											<div class="styled-select">
+												<select id="pomTeam" name="pomTeam" onchange="getPlayers(this);">
+													<option>---SELECT---</option>
+												</select>
+											</div>
+										</td>
+										<td>
+											<div class="styled-select">
+												<select id="pom" name="pom">
+													<option>---SELECT---</option>
+												</select>
+											</div>
+										</td>
+										<td>
+											[10 points]
+										<td>
+									</tr>
+									<tr>
+										<td>NO GOALS:</td>
+										<td><input type="radio" name="nogoals" id="nogoals"
+											value="yes"> Yes <input type="radio" name="nogoals"
+											id="nogoals" value="no"> No</td>
+										<td>
+											[10 points]
+										<td>
+									</tr>
+									<tr>
+										<td>&nbsp;</td>
+										<td><input type="submit" value="submit" name="submit"
+											id="submit" onclick="playQuiz();"/> <input type="reset" value="reset" name="reset"
+											id="reset" /></td>
+									</tr>
+								</table>
+								</form>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</center>
+			<div>
+	
+
+	<script src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/fifa.js"></script>
+
+</body>
+</html>

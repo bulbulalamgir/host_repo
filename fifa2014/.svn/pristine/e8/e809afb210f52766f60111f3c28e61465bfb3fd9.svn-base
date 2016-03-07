@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>FIFA WC 2014</title>
+<link rel="stylesheet" href="css/fifa.css" />
+<style type="text/css">
+::-webkit-scrollbar {
+	background: #2E2EFE;
+	width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #04B404;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #2E2EFE;
+	border-radius: 10px;
+}
+</style>
+</head>
+
+<body>
+	<form>
+		<div id="parentDiv">
+			<center>
+				<div id="mainDiv" class="mainDiv">
+					<table id="mainTable" class="mainTable" width="100%">
+						<tr>
+							<td width="35%" align="left"><font size="4"><b>Fixtures
+										FIFA 2014<b /></font>
+								<div id="fixturesDiv" class="fixturesDiv"></div></td>
+							<td width="65%">
+								<div class="parentDiv" style="float: right;">
+									<img src="img/logo.jpg" width="60%" height="60%" />
+								</div>
+								<h3>Match 5. Brazil vs China</h3> <br />
+								<table>
+									<tr>
+										<td>Winner:</td>
+										<td>
+											<div class="styled-select">
+												<select id="winner" name="winner">
+													<option>Brazil</option>
+													<option>China</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Team A Goals:</td>
+										<td>
+											<div class="styled-select">
+												<select id="teamAGoals" name="teamAGoals">
+													<option>0</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5+</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Team B Goals:</td>
+										<td>
+											<div class="styled-select">
+												<select id="teamBGoals" name="teamBGoals">
+													<option>0</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5+</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Player of the Match:</td>
+										<td>
+											<div class="styled-select">
+												<select id="pomTeam" name="pomTeam">
+													<option>Brazil</option>
+													<option>China</option>
+												</select>
+											</div>
+										</td>
+										<td>
+											<div class="styled-select">
+												<select id="pom" name="pom">
+													<option>0</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5+</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>No Goals:</td>
+										<td><input type="radio" name="nogoals" id="nogoals"
+											value="yes"> Yes <input type="radio" name="nogoals"
+											id="nogoals" value="no"> No</td>
+									</tr>
+									<tr>
+										<td>&nbsp;</td>
+										<td><input type="submit" value="submit" name="submit"
+											id="submit" /> <input type="reset" value="reset" name="reset"
+											id="reset" /></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</center>
+			<div>
+	</form>
+
+	<script src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/fifa.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+// The root URL for the RESTful services
+var rootURL = "http://localhost:8080/cellar/rest/fifa";
+
+var selectedFixture;
+
+// Retrieve all fixtures when application starts
+getFixtures();
+
+function getFixtures() {
+	$.ajax({
+		type : 'GET',
+		url : rootURL,
+		dataType : "json", // data type of response
+		success : renderList
+	});
+}
+
+function renderList(data) {
+	// JAX-RS serializes an empty list as null, and a 'collection of one' as an
+	// object (not an 'array of one')
+	var list = data == null ? [] : (data instanceof Array ? data : [ data ]);
+	var row = '';
+	var divText = '';
+	divText += '<table width="100%" id="fixtures" border="0">';
+	$.each(list,function(index, fixture) {
+		divText += '<tr><td width="10%" style="vertical-align:middle;" align="right"><font size="4">'+ fixture.id +  '</font></td>';
+		divText += '<td width="90%"><b>' + fixture.team1	+ ' vs ' + fixture.team2 + '\n ';
+		divText += '   ' + fixture.date + ' ' + fixture.time	+ ' ' + fixture.day + ' ' + fixture.group 	+ '</b></td></tr>';
+	});
+	divText += '</table>';
+	$("#fixturesDiv").html(divText);
+	$('#fixtures tr:odd').attr('class', 'odd');
+	$('#fixtures tr:even').attr('class', 'even');
+}

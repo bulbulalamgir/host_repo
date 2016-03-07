@@ -1,0 +1,38 @@
+CREATE TABLE `fixtures` (
+  `Id` int(11) NOT NULL auto_increment,
+  `Date` date NOT NULL default '0000-00-00',
+  `Time` time NOT NULL default '00:00:00',
+  `MatchId` varchar(50) NOT NULL default '',
+  `CutOff` time NOT NULL default '00:00:00',
+  `Team1` varchar(50) NOT NULL default '',
+  `Team2` varchar(50) NOT NULL default '',
+  `Day` varchar(100) default NULL,
+  `Group` varchar(50) default NULL,
+  PRIMARY KEY  (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=latin1;
+
+insert into `fixtures`(`Date`,`Time`,`MatchId`,`CutOff`,`Team1`,`Team2`,`Day`,`Group`) 
+values ('2012-07-12 00:00:00','21:00:00','12_JUL@BRA|CRO','20:30:00','BRA','CRO','THU','Group-A');
+
+insert into `fixtures`(`Date`,`Time`,`MatchId`,`CutOff`,`Team1`,`Team2`,`Day`,`Group`) 
+values ('2012-07-13 00:00:00','17:00:00','13_JUL@MEX|CAM','16:30:00','MEX','CAM','FRI','Group-A');
+insert into `fixtures`(`Date`,`Time`,`MatchId`,`CutOff`,`Team1`,`Team2`,`Day`,`Group`) 
+values ('2012-07-13 00:00:00','20:00:00','13_JUL@SPA|NET','19:30:00','SPA','NET','FRI','Group-B');
+insert into `fixtures`(`Date`,`Time`,`MatchId`,`CutOff`,`Team1`,`Team2`,`Day`,`Group`) 
+values ('2012-07-13 00:00:00','23:00:00','13_JUL@CHI|AUS','22:30:00','CHI','AUS','FRI','Group-B');
+
+insert into `fixtures`(`Date`,`Time`,`MatchId`,`CutOff`,`Team1`,`Team2`,`Day`,`Group`) 
+values ('2012-07-14 00:00:00','17:00:00','14_JUL@COL|GRE','16:30:00','COL','GRE','SAT','Group-C');
+insert into `fixtures`(`Date`,`Time`,`MatchId`,`CutOff`,`Team1`,`Team2`,`Day`,`Group`) 
+values ('2012-07-14 00:00:00','20:00:00','14_JUL@URU|COS','19:30:00','URU','COS','SAT','Group-D');
+insert into `fixtures`(`Date`,`Time`,`MatchId`,`CutOff`,`Team1`,`Team2`,`Day`,`Group`) 
+values ('2012-07-14 00:00:00','23:00:00','14_JUL@ENG|ITA','22:30:00','ENG','ITA','SAT','Group-D');
+
+insert into `fixtures`(`Date`,`Time`,`MatchId`,`CutOff`,`Team1`,`Team2`,`Day`,`Group`) 
+values ('2012-07-15 00:00:00','02:00:00','15_JUL@IVO|JAP','01:30:00','IVO','JAP','SUN','Group-C');
+insert into `fixtures`(`Date`,`Time`,`MatchId`,`CutOff`,`Team1`,`Team2`,`Day`,`Group`) 
+values ('2012-07-15 00:00:00','17:00:00','15_JUL@SWI|ECU','16:30:00','SWI','ECU','SUN','Group-E');
+insert into `fixtures`(`Date`,`Time`,`MatchId`,`CutOff`,`Team1`,`Team2`,`Day`,`Group`) 
+values ('2012-07-15 00:00:00','20:00:00','15_JUL@FRA|HON','19:30:00','FRA','HON','SUN','Group-E');
+insert into `fixtures`(`Date`,`Time`,`MatchId`,`CutOff`,`Team1`,`Team2`,`Day`,`Group`) 
+values ('2012-07-15 00:00:00','23:00:00','15_JUL@ARG|BOS','22:30:00','ARG','BOS','SUN','Group-D');

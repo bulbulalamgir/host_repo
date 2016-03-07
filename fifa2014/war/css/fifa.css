@@ -1,0 +1,103 @@
+body
+{
+font-family: Helvetica, Arial, Sans-Serif;
+vertical-align: baseline;
+font-size: 70%;
+color:#04B404;
+background-color:#5882FA;
+margin:0px;
+background:url('img/WP.jpg') repeat-x #FFFFFF;
+scrollbar-face-color: #04B404; 
+scrollbar-track-color: #fff8dc; 
+scrollbar-arrow-color: #FFFF00; 
+scrollbar-highlight-color: #fff8dc; 
+scrollbar-shadow-color: #d2691e; 
+scrollbar-3dlight-color: #ffebcd; 
+scrollbar-darkshadow-color: #8b0000; 
+}
+
+
+
+body, p, table, td, th, ul, ol, textarea, input
+{
+font-family: verdana,helvetica,arial,sans-serif;
+/* font: 12px/1.5 Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif; */
+}
+h1
+{
+font: 15px/1.5 Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
+margin-bottom:0px;
+}
+h2
+{
+font: 9px/1.5 Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
+margin-bottom:0px;
+font-weight:bold;
+}
+
+table, input, textarea
+{
+font-size: 100%;
+}
+
+.parentDiv
+{
+	background: url(/img/WP.jpg);
+	opacity:0.8;
+	filter:alpha(opacity=80); /* For IE8 and earlier */
+}
+.mainDiv
+{
+	background-color:#FFFF00;
+	width:70%;
+}
+.mainTable
+{
+	border:2px solid #DF013A;
+}
+
+.fixturesDiv
+{
+	width: 200px; 
+	height: 300px; 
+	overflow-y: scroll;
+	background-color:#2E2EFE;
+}
+
+.loginDiv
+{
+	border:2px solid #04B404;
+}
+
+.odd
+{
+	background-color:#FFFF00;
+	color:#04B404;
+}
+.even
+{
+	background-color:#04B404;
+	color:#FFFF00;
+}
+
+.styled-select select {
+    font-family: Helvetica, Arial, Sans-Serif;
+	font-size: 100%;
+	color:#04B404;
+}
+
+.loginDiv
+{
+	border:1px solid #04B404;
+}
+
+.show
+{
+	visibility:visible;
+	display:display;
+}
+
+.hide
+{
+	visibility:hidden;
+	display:none;

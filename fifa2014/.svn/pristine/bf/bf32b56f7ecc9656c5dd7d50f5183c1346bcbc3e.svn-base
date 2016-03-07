@@ -1,0 +1,49 @@
+package com.kiran.fifa.dao;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.kiran.fifa.model.Fixture;
+
+public class FifaDAO {
+
+    public List<Fixture> getFixtures() {
+	List<Fixture> list = new ArrayList<Fixture>();
+	Connection c = null;
+	String sql = "SELECT * FROM fixtures";
+	try {
+	    c = ConnectionHelper.getConnection();
+	    Statement s = c.createStatement();
+	    ResultSet rs = s.executeQuery(sql);
+	    while (rs.next()) {
+		list.add(processRow(rs));
+	    }
+	} catch (SQLException e) {
+	    e.printStackTrace();
+	    throw new RuntimeException(e);
+	} finally {
+	    ConnectionHelper.close(c);
+	}
+	return list;
+    }
+
+    protected Fixture processRow(ResultSet rs) throws SQLException {
+	Fixture fixture = new Fixture();
+	fixture.setId(rs.getInt("id"));
+	fixture.setCutOff(rs.getString("cutoff"));
+	fixture.setDate(rs.getDate("date"));
+	fixture.setDay(rs.getString("day"));
+	fixture.setGroup(rs.getString("group"));
+	fixture.setMatchId(rs.getString("matchId"));
+	fixture.setTeam1(rs.getString("team1"));
+	fixture.setTeam2(rs.getString("team2"));
+	fixture.setTime("17:00");
+	return fixture;
+    }
+
+}
+

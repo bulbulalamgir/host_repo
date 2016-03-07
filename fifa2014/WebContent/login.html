@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>FIFA WC 2014</title>
+<link rel="stylesheet" href="css/fifa.css" />
+<style type="text/css">
+::-webkit-scrollbar {
+	background: #2E2EFE;
+	width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #04B404;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #2E2EFE;
+	border-radius: 10px;
+}
+</style>
+</head>
+
+<body>
+	<form>
+		<div id="parentDiv">
+			<center>
+				<div id="mainDiv" class="mainDiv">
+					<table>
+						<tr>
+							<td colspan="2">
+								<div class="parentDiv">
+									<center>
+									<img src="pics/logo.png" width="50%" height="50%" />
+									</center>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="loginDiv">
+									<table id="loginTab" style="padding:7px;" class="show">
+										<tr>
+											<td>User: </td><td><input type="text" id="userId" name="userId"></td>
+										</tr>
+										<tr>
+											<td>Password: </td><td><input type="password" id="password" name="password"></td>
+										</tr>
+										<tr>
+											<td>&nbsp;</td>
+											<td><input type="submit" value="Login" name="login"	id="login" onclick="login();"/> 
+												<input type="reset" value="Reset" name="reset" id="reset" /></td>
+										</tr>
+									</table>
+									
+									<table id="signUpTab" style="padding:7px;" class="hide">
+										<tr>
+											<td>User: </td><td><input type="text" id="userId" name="userId"></td>
+										</tr>
+										<tr>
+											<td>Password: </td><td><input type="password" id="password" name="password"></td>
+										</tr>
+										<tr>
+											<td>Re-Password: </td><td><input type="password" id="repassword" name="repassword"></td>
+										</tr>
+										<tr>
+											<td>Email: </td><td><input type="text" id="email" name="email"></td>
+										</tr>
+										<tr>
+											<td>Mobile: </td><td><input type="text" id="mobile" name="mobile"></td>
+										</tr>
+										<tr>
+											<td>League: </td><td><input type="text" id="league" name="league"></td>
+										</tr>
+										<tr>
+											<td>&nbsp;</td>
+											<td><input type="submit" value="Register" name="register"	id="register" onclick="register();"/> 
+												<input type="reset" value="Reset" name="reset" id="reset" /></td>
+										</tr>
+									</table>
+									<a href="#" style="float:right;" id="signUpLink" onclick="showSignup();" class="show">Register</a>
+									<a href="#" style="float:right;" id="loginLink" onclick="showLogin();"class="hide">Login</a>
+								</div>
+								<br/><br/>
+							</td>
+						</tr>
+					<table>
+				</div>
+			</center>			
+		<div>
+	</form>
+
+	<script src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/fifa.js"></script>
+
+</body>
+</html>
